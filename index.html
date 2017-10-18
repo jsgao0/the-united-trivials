@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html ng-app="taskApp">
+<head>
+    <meta charset='utf-8'>
+    <title>The United Trivials</title>
+    <script type="text/javascript" src="task.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/task.css">
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="angular-animate.min.js"></script>
+    <script type="text/javascript" src="pouchdb-5.1.0.min.js"></script>
+</head>
+<body ng-controller="ModelController" ng-keydown="deleteMode($event)" ng-keyup="normalMode($event)">
+    <section ng-style="{'opacity': deleteflag?0.6:1}">
+    <div class="line animate" ng-repeat="task in tasks">
+        <div class="date">{{task.getDate()}}</div>
+        <div class="task pointer" ng-style="{'background-color': task.color}" ng-click="change_state(task,this)">{{task.name}}</div>
+    </div>
+    <div class="line animate" ng-repeat="newtask in newTasks">
+        <div class="date">{{newtask.getDate()}}</div>
+        <div class="date">{{newtask.name}}</div>
+    </div>
+    <div class="line">
+        <input class="task" ng-change="inputTask()" ng-keypress="submit($event)" ng-model="input" type="text" autofocus="true">
+    </div>
+    </section>
+    <script type="text/javascript" src="controller.js"></script>
+</body>
+</html>

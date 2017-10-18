@@ -1,0 +1,50 @@
+body {
+    background-color: #f0e4d2;
+}
+.task {
+    color: #FFFFFF  ;
+    background-color: #0056ab;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 20px;
+    border: 0;
+}
+
+/*
+.circle {
+    width:40px;
+    height:40px;
+    border-radius:50px;
+    font-size:40px;
+    color:#fff;
+    line-height:40px;
+    text-align:center;
+    background:orange;
+}
+*/
+.pointer {
+    cursor: pointer;
+}
+.line {
+    margin: 10px;
+}
+.date {
+    color: #000000 ;
+    background-color: #D0D0D0;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 20px;
+    border: 0;
+}
+.animate {
+}
+.animate.ng-enter {
+    -webkit-transition: 1s;
+    transition: 1s;
+    opacity: 0;
+}
+.animate.ng-enter-active {
+    opacity: 1;
+}
